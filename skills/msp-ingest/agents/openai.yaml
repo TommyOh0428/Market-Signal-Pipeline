@@ -1,0 +1,4 @@
+interface:
+  display_name: "Market Signal Data Ingestion"
+  short_description: "Handle market and news inputs"
+  default_prompt: "Use $msp-ingest to implement or test market data and news ingestion."

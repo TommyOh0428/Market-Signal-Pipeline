@@ -1,0 +1,4 @@
+interface:
+  display_name: "Market Signal Quant Engine"
+  short_description: "Build deterministic signal scoring"
+  default_prompt: "Use $msp-quant to implement or review signal scoring logic."

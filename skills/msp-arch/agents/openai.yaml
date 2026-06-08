@@ -1,0 +1,4 @@
+interface:
+  display_name: "Market Signal Architecture"
+  short_description: "Guide pipeline architecture changes"
+  default_prompt: "Use $msp-arch to design or review the Market Signal Pipeline service flow."

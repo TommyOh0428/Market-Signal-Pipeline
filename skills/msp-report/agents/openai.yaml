@@ -1,0 +1,4 @@
+interface:
+  display_name: "Market Signal Reporting"
+  short_description: "Create evidence-grounded reports"
+  default_prompt: "Use $msp-report to implement or review daily market signal reports."

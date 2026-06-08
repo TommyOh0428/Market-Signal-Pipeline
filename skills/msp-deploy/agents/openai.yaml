@@ -1,0 +1,4 @@
+interface:
+  display_name: "Market Signal Cloud Deploy"
+  short_description: "Manage GCP and Terraform setup"
+  default_prompt: "Use $msp-deploy to implement or review GCP deployment changes."
