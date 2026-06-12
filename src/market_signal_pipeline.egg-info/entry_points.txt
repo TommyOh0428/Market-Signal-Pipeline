@@ -1,2 +1,0 @@
-[console_scripts]
-msp-quant-example = market_signal_pipeline.cli.quant_example:main
