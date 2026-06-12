@@ -127,6 +127,26 @@ confidence_score = min(abs(final_score), 1.0)
 
 These values are configurable MVP defaults. They are not validated investment logic and should be evaluated through backtesting.
 
+## Local Docker Example
+
+Build the container:
+
+```bash
+docker build -t market-signal-pipeline .
+```
+
+Run the live quant example:
+
+```bash
+docker run --rm market-signal-pipeline
+```
+
+Override the ticker or news score:
+
+```bash
+docker run --rm market-signal-pipeline msp-quant-example --ticker AAPL --news-score 0.25
+```
+
 ## Example Report
 
 ```text

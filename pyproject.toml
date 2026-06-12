@@ -1,0 +1,15 @@
+[project]
+name = "market-signal-pipeline"
+version = "0.1.0"
+description = "Event-driven market signal pipeline MVP."
+requires-python = ">=3.11"
+dependencies = [
+    "yfinance>=0.2",
+]
+
+[project.scripts]
+msp-quant-example = "market_signal_pipeline.cli.quant_example:main"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
