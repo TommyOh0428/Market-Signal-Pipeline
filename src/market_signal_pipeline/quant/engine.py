@@ -96,8 +96,11 @@ def calculate_signal(
     volumes = [bar.volume for bar in sorted_bars]
 
     _validate_market_data(closes, volumes)
-    if current_price is not None and current_price <= 0:
-        raise ValueError("Current price must be positive.")
+    if current_price is not None:
+        import math
+
+        if (not math.isfinite(current_price)) or current_price <= 0:
+            raise ValueError("Current price must be positive.")
 
     sma20 = _sma(closes, config.sma_short_window)
     sma50 = _sma(closes, config.sma_long_window)
