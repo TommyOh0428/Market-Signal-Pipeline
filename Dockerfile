@@ -14,7 +14,7 @@ COPY src ./src
 COPY examples ./examples
 
 RUN pip install --upgrade pip \
-    && pip install --only-binary=:all: .
+    && pip install --prefer-binary .
 
 USER app
 
