@@ -236,11 +236,13 @@ def score_from_components(
 
 
 def _validate_market_data(closes: list[float], volumes: list[float]) -> None:
+    import math
+
     if not closes:
         raise ValueError("At least one price bar is required.")
-    if any(close <= 0 for close in closes):
+    if any((not math.isfinite(close)) or close <= 0 for close in closes):
         raise ValueError("Close prices must be positive.")
-    if any(volume < 0 for volume in volumes):
+    if any((not math.isfinite(volume)) or volume < 0 for volume in volumes):
         raise ValueError("Volumes cannot be negative.")
 
 
