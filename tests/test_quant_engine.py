@@ -100,7 +100,7 @@ def test_calculate_signal_can_project_from_current_price_override() -> None:
 
     result = calculate_signal("NVDA", bars, news_score=1.0, current_price=208.64)
 
-    assert result.indicators.sma20 == 222.075
+    assert result.indicators.sma20 == pytest.approx(222.075, abs=1e-9)
     assert result.scores.estimated_base_price == 208.64
     assert result.scores.estimated_move_percent == 3.19
     assert result.scores.estimated_price_change == 6.66
